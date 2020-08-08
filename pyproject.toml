@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "package"
+version = "0.1.0"
+description = ""
+authors = ["Joe Schmo <joeschmo@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+bump2version = "^1.0.0"
+mypy = "^0.782"
+pytest = "^6.0"
+tox = "^3.19.0"
+
+[tool.poetry.scripts]
+my_script = "package.my_script:run"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["package/tests"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
